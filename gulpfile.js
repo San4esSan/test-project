@@ -3,7 +3,7 @@ const browserSync = require("browser-sync").create();
 const watch = require("gulp-watch");
 const sass = require("gulp-sass");
 
-gulp.task("sass", function() {
+gulp.task("scss", function() {
   return gulp
     .src("./src/scss/main.scss")
     .pipe(sass())
@@ -27,11 +27,11 @@ gulp.task("watch", function() {
     gulp.parallel(browserSync.reload)
   );
 
-  watch("./src/scss/**/*.sass", function() {
-    // setTimeout(gulp.parallel("scss"), 1000);
-    gulp.parallel("scss");
+  watch("./src/scss/**/*.scss", function() {
+    setTimeout(gulp.parallel("scss"), 1000);
+    // gulp.parallel("scss");
   });
 });
 
 // Запускаем дефолтный таск
-gulp.task("default", gulp.series("sass", gulp.parallel("server", "watch")));
+gulp.task("default", gulp.series("scss", gulp.parallel("server", "watch")));

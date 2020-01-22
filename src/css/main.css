@@ -1,10 +1,10 @@
 .header {
   padding: 50px 100px;
   text-align: center;
-  background: #e2158d;
+  background: #37e215;
   font-size: 32px;
   font-family: sans-serif;
-  color: #196606; }
+  color: #18040f; }
 
 .main {
   background: #90e0ee;
@@ -12,7 +12,7 @@
   font-size: 38px;
   font-family: sans-serif;
   text-align: center;
-  color: #196606; }
+  color: #18040f; }
 
 .footer {
   background: #7ba0c5;
